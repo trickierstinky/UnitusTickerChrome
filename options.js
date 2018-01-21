@@ -7,12 +7,12 @@ xhr.onload = function() {
   var status = xhr.status;
   if (status === 200) {
     var response = xhr.response[0];
-    document.getElementById('btcprice').innerHTML = response.price_btc + ' BTC';
-    document.getElementById('usdprice').innerHTML = response.price_usd + ' USD';
-    document.getElementById('marketcap').innerHTML = response.market_cap_usd + ' USD';
-    document.getElementById('1percentage').innerHTML = response.percent_change_1h + '%';
-    document.getElementById('24percentage').innerHTML = response.percent_change_24h + '%';
-    document.getElementById('7dpercentage').innerHTML = response.percent_change_7d + '%';
+    document.getElementById('btcprice').innerHTML = Sanitizer.unwrapSafeHTML(response.price_btc + ' BTC');
+    document.getElementById('usdprice').innerHTML = Sanitizer.unwrapSafeHTML(response.price_usd + ' USD');
+    document.getElementById('marketcap').innerHTML = Sanitizer.unwrapSafeHTML(response.market_cap_usd + ' USD');
+    document.getElementById('1percentage').innerHTML = Sanitizer.unwrapSafeHTML(response.percent_change_1h + '%');
+    document.getElementById('24percentage').innerHTML = Sanitizer.unwrapSafeHTML(response.percent_change_24h + '%');
+    document.getElementById('7dpercentage').innerHTML = Sanitizer.unwrapSafeHTML(response.percent_change_7d + '%');
     
   } else {
     console.log (response);
