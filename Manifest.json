@@ -2,8 +2,8 @@
 
   "description": "Simple Unitus Ticker - Based on Coin Market Cap",
   "manifest_version": 2,
-  "name": "unitus-ticker",
-  "version": "1.0",
+  "name": "Unitus Price Ticker",
+  "version": "1.0.1",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button",
   "icons": {
     "48": "icons/unitus-48.png"
