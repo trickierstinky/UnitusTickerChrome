@@ -14,7 +14,7 @@ xhr.onload = function() {
     document.getElementById('1percentage').innerHTML = escapeHTML(response.percent_change_1h + '%');
     document.getElementById('24percentage').innerHTML = escapeHTML(response.percent_change_24h + '%');
     document.getElementById('7dpercentage').innerHTML = escapeHTML(response.percent_change_7d + '%');
-    
+
   } else {
     console.log (response);
   }
@@ -26,8 +26,9 @@ var anchors = document.querySelectorAll('a');
 
 for (var i = 0; i <= anchors.length; anchors++) {
   anchors[i].addEventListener('click', function (e){
-    e.preventDefault();
-    browser.tabs.create({
+    //e.preventDefault();
+    //console.log(this.href);
+    chrome.tabs.create({
       url: this.href
     });
   });
